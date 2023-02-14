@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 11:21:09 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/01/24 16:04:09 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/10 11:12:37 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,6 @@ char	**ft_split(char *s, char c)
 	if (!list)
 		return (NULL);
 	list[index] = NULL;
-	free(s);
 	return (list);
 }
 

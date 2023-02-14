@@ -6,7 +6,7 @@
 #    By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 12:41:57 by lolaparr          #+#    #+#              #
-#    Updated: 2023/01/23 13:59:22 by lolaparr         ###   ########.fr        #
+#    Updated: 2023/02/10 11:11:50 by lolaparr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,15 @@ SRCS		:= 	\
 			strings/ft_split.c \
 			strings/ft_strjoin.c \
 			strings/ft_striteri.c \
+			lst/ft_lstadd_back.c \
+			lst/ft_lstadd_front.c \
+			lst/ft_lstclear.c \
+			lst/ft_lstdelone.c \
+			lst/ft_lstiter.c \
+			lst/ft_lstlast.c \
+			lst/ft_lstmap.c \
+			lst/ft_lstnew.c \
+			lst/ft_lstsize.c \
 			get_next_line/get_next_line.c \
 			get_next_line/get_next_line_utils.c \
 			ft_printf/ft_printf.c \
@@ -46,7 +55,7 @@ OBJS		:= $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 DEPS		:= $(OBJS:.o=.d)
 
 CC			:= cc
-CFLAGS		:= -Wall -Wextra -Werror -fPIC
+CFLAGS		:= -Wall -Wextra -Werror -fPIC -g3
 CPPFLAGS	:= -MMD -MP -I include
 AR			:= ar
 ARFLAGS		:= -r -c -s
