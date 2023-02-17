@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:19:10 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/15 16:36:41 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:50:55 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ int					ft_check_len_digit(char **str);
 int					ft_check_digit(char **str);
 void				sa(t_lst **list_a);
 void				ra(t_lst **list_a);
+void				rra(t_lst **list_a);
 
 #endif

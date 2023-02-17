@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:53:40 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/15 17:06:01 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/17 16:58:25 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,21 @@ void	ra(t_lst **list_a)
 	*list_a = (*list_a)->next;
 	tmp_2->next = NULL;
 	// tmp->next = NULL;
+}
+
+void	rra(t_lst **list_a)
+{
+	t_lst	*new_last;
+	t_lst	*new_first;
+
+	new_last = *list_a;
+	new_first = *list_a;
+	if ((*list_a)->next == NULL)
+		return ;
+	while (new_last->next)
+		new_last = new_last->next;
+	new_first = ft_last_lst(*list_a);
+	new_last->next = NULL;
+	new_first->next = *list_a;
+	*list_a = (*list_a)->next;
 }

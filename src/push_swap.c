@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/15 17:17:16 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/17 16:58:44 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_make_stack(int ac, char **av, t_lst **list_a)
 	{
 		new = ft_new_lst(ft_atoi(args[i]));
 		ft_add_back_lst(list_a, new);
-		if (!(new->content >= INT_MINI &&new->content <= INT_MAXI))
+		if (!(new->content >= INT_MINI && new->content <= INT_MAXI))
 			return (1);
 		++i;
 	}
@@ -49,18 +49,18 @@ int	main(int ac, char **av)
 	if (i != 0)
 		return (1);
 	i = ft_make_stack(ac, av, &list_a);
-	// cpy = list_a;
-	// while (cpy)
-	// {
-	// 	ft_printf("\ncontent : %i\n", cpy->content);
-	// 	cpy = cpy->next;
-	// }
-	// ra(&list_a);
-	// ft_printf("----------------");
-	// while (list_a)
-	// {
-	// 	ft_printf("\ncontent : %i\n", list_a->content);
-	// 	list_a = list_a->next;
-	// }
+	 cpy = list_a;
+	 while (cpy)
+	 {
+	 	ft_printf("\ncontent : %i\n", cpy->content);
+	 	cpy = cpy->next;
+	 }
+	 sa(&list_a);
+	 ft_printf("----------------");
+	 while (list_a)
+	 {
+	 	ft_printf("\ncontent : %i\n", list_a->content);
+	 	list_a = list_a->next;
+	 }
 	return (0);
 }
