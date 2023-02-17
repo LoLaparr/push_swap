@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:19:10 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/14 14:06:09 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:36:41 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ void				ft_add_back_lst(t_lst **lst, t_lst *new);
 int					ft_check_all(int ac, char **str);
 int					ft_check_len_digit(char **str);
 int					ft_check_digit(char **str);
+void				sa(t_lst **list_a);
+void				ra(t_lst **list_a);
 
 #endif

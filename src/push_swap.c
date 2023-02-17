@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/14 14:55:44 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/15 17:17:16 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 int	ft_make_stack(int ac, char **av, t_lst **list_a)
 {
@@ -41,6 +40,7 @@ int	ft_make_stack(int ac, char **av, t_lst **list_a)
 int	main(int ac, char **av)
 {
 	t_lst	*list_a;
+	t_lst	*cpy;
 	int		i;
 
 	list_a = NULL;
@@ -49,5 +49,18 @@ int	main(int ac, char **av)
 	if (i != 0)
 		return (1);
 	i = ft_make_stack(ac, av, &list_a);
+	// cpy = list_a;
+	// while (cpy)
+	// {
+	// 	ft_printf("\ncontent : %i\n", cpy->content);
+	// 	cpy = cpy->next;
+	// }
+	// ra(&list_a);
+	// ft_printf("----------------");
+	// while (list_a)
+	// {
+	// 	ft_printf("\ncontent : %i\n", list_a->content);
+	// 	list_a = list_a->next;
+	// }
 	return (0);
 }

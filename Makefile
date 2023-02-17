@@ -6,16 +6,17 @@
 #    By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 14:52:45 by lolaparr          #+#    #+#              #
-#    Updated: 2023/02/10 13:23:19 by lolaparr         ###   ########.fr        #
+#    Updated: 2023/02/15 15:00:00 by lolaparr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		:= push_swap
 SRC_DIR		:= src
 BUILD_DIR:= .build
-SRCS		:=  test.c \
+SRCS		:=  push_swap.c \
 				utils.c \
-				parsing.c
+				parsing.c \
+				ft_sort.c
 
 SRCS		:= $(SRCS:%=$(SRC_DIR)/%)
 OBJS		:= $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
