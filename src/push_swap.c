@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/17 16:58:44 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/02/22 15:50:11 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_make_stack(int ac, char **av, t_lst **list_a)
 	{
 		new = ft_new_lst(ft_atoi(args[i]));
 		ft_add_back_lst(list_a, new);
-		if (!(new->content >= INT_MINI && new->content <= INT_MAXI))
+		if (!(new->content >= INT_MINI &&new->content <= INT_MAXI))
 			return (1);
 		++i;
 	}
@@ -40,27 +40,31 @@ int	ft_make_stack(int ac, char **av, t_lst **list_a)
 int	main(int ac, char **av)
 {
 	t_lst	*list_a;
+	t_lst	*list_b;
 	t_lst	*cpy;
 	int		i;
 
 	list_a = NULL;
+	list_b = NULL;
 	i = 0;
 	i = ft_check_all(ac, av);
 	if (i != 0)
 		return (1);
 	i = ft_make_stack(ac, av, &list_a);
-	 cpy = list_a;
-	 while (cpy)
-	 {
-	 	ft_printf("\ncontent : %i\n", cpy->content);
-	 	cpy = cpy->next;
-	 }
-	 sa(&list_a);
-	 ft_printf("----------------");
-	 while (list_a)
-	 {
-	 	ft_printf("\ncontent : %i\n", list_a->content);
-	 	list_a = list_a->next;
-	 }
+	cpy = list_b;
+	if (i == 0)
+	{
+		pb(&list_a, &list_b);
+		pb(&list_a, &list_b);
+		pb(&list_a, &list_b);
+		pb(&list_a, &list_b);
+		pb(&list_a, &list_b);
+		pb(&list_a, &list_b);
+		pb(&list_a, &list_b);
+		pb(&list_a, &list_b);
+		pb(&list_a, &list_b);
+		pb(&list_a, &list_b);
+		ft_print_stacks(list_a, list_b);
+	}
 	return (0);
 }

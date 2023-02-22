@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:53:40 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/17 16:58:25 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/02/22 15:45:25 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,14 +49,28 @@ void	rra(t_lst **list_a)
 	t_lst	*new_last;
 	t_lst	*new_first;
 
-	new_last = *list_a;
-	new_first = *list_a;
-	if ((*list_a)->next == NULL)
+	if (list_a == NULL || (*list_a)->next == NULL)
 		return ;
-	while (new_last->next)
-		new_last = new_last->next;
 	new_first = ft_last_lst(*list_a);
+	new_last = *list_a;
+	while (new_last->next->next)
+		new_last = new_last->next;
 	new_last->next = NULL;
 	new_first->next = *list_a;
-	*list_a = (*list_a)->next;
+	(*list_a) = new_first;
+}
+
+void	pb(t_lst **list_a, t_lst **list_b)
+{
+	t_lst	*tmp;
+
+	if ((*list_a)->next == NULL)
+		return ;
+	tmp = (*list_a)->next;
+	(*list_a)->next = *list_b;
+	*list_b = *list_a;
+	*list_a = tmp;
+	// tmp->next = NULL;
+	// *list_b = tmp;
+	// *list_a = (*list_a)->next;
 }

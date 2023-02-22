@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:19:10 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/17 15:50:55 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/02/22 15:24:16 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 typedef struct s_lst
 {
 	long long int	content;
-	void			*next;
+	struct s_lst	*next;
 }					t_lst;
 
 int					ft_make_stack(int ac, char **av, t_lst **list_a);
@@ -36,5 +36,7 @@ int					ft_check_digit(char **str);
 void				sa(t_lst **list_a);
 void				ra(t_lst **list_a);
 void				rra(t_lst **list_a);
+void				ft_print_stacks(t_lst *stack_a, t_lst *stack_b);
+void				pb(t_lst **list_a, t_lst **list_b);
 
 #endif
