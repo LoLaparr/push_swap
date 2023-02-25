@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:19:10 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/22 15:24:16 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/25 18:17:47 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,18 @@ void				ft_add_back_lst(t_lst **lst, t_lst *new);
 int					ft_check_all(int ac, char **str);
 int					ft_check_len_digit(char **str);
 int					ft_check_digit(char **str);
+int					ft_check_double(t_lst **stack_a);
 void				sa(t_lst **list_a);
+void				sb(t_lst **list_b);
+void				ss(t_lst **list_a, t_lst **list_b);
 void				ra(t_lst **list_a);
+void				rb(t_lst **list_b);
+void				rr(t_lst **list_a, t_lst **list_b);
 void				rra(t_lst **list_a);
+void				rrb(t_lst **list_b);
+void				rrr(t_lst **list_a, t_lst **list_b);
 void				ft_print_stacks(t_lst *stack_a, t_lst *stack_b);
 void				pb(t_lst **list_a, t_lst **list_b);
+void				pa(t_lst **list_a, t_lst **list_b);
 
 #endif

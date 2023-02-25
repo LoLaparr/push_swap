@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 16:20:32 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/14 14:26:23 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/25 17:43:22 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,31 @@ int	ft_check_all(int ac, char **str)
 	i += ft_check_digit(args);
 	i += ft_check_len_digit(args);
 	return (i);
+}
+
+int	ft_check_double(t_lst **stack_a)
+{
+	t_lst	*cpy;
+	t_lst	*tmp;
+	int		i;
+	int		j;
+
+	tmp = (*stack_a);
+	i = 0;
+	while (tmp)
+	{
+		cpy = (*stack_a);
+		j = 0;
+		while (cpy)
+		{
+			if (i != j)
+				if (cpy->content == tmp->content)
+					return (1);
+			cpy = cpy->next;
+			++j;
+		}
+		++i;
+		tmp = tmp->next;
+	}
+	return (0);
 }

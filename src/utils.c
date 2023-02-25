@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:02:19 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/22 15:55:26 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/25 17:58:39 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ft_print_stacks(t_lst *stack_a, t_lst *stack_b)
 	{
 		if (stack_a != NULL)
 		{
-			ft_printf("content stack_a : %i",
+			ft_printf("content stack_a : %i\n",
 						stack_a->content);
 			stack_a = stack_a->next;
 			ft_printf("\t\t");

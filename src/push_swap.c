@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/22 15:50:11 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/25 18:21:09 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,10 @@ int	main(int ac, char **av)
 {
 	t_lst	*list_a;
 	t_lst	*list_b;
-	t_lst	*cpy;
+	// t_lst	*cpy = NULL;
 	int		i;
 
+	// ft_printf("content->cpy = %i\n", cpy->content);
 	list_a = NULL;
 	list_b = NULL;
 	i = 0;
@@ -51,19 +52,14 @@ int	main(int ac, char **av)
 	if (i != 0)
 		return (1);
 	i = ft_make_stack(ac, av, &list_a);
-	cpy = list_b;
+	i = ft_check_double(&list_a);
+	// cpy = list_b;
 	if (i == 0)
 	{
 		pb(&list_a, &list_b);
 		pb(&list_a, &list_b);
 		pb(&list_a, &list_b);
-		pb(&list_a, &list_b);
-		pb(&list_a, &list_b);
-		pb(&list_a, &list_b);
-		pb(&list_a, &list_b);
-		pb(&list_a, &list_b);
-		pb(&list_a, &list_b);
-		pb(&list_a, &list_b);
+		rrr(&list_a, &list_b);
 		ft_print_stacks(list_a, list_b);
 	}
 	return (0);
