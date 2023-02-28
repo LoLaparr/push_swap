@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   case_3.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 18:13:16 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/02/27 18:35:33 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/02/28 16:23:27 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.c"
+#include "push_swap.h"
 
 int	ft_find_highest(t_lst *stack_a)
 {
@@ -19,9 +19,10 @@ int	ft_find_highest(t_lst *stack_a)
 	highest = stack_a->content;
 	while (stack_a)
 	{
-		if (highest > stack_a->content)
+		if (highest < stack_a->content)
 			highest = stack_a->content;
 		stack_a = stack_a->next;
+		ft_printf("highest %i\n", highest);
 	}
 	return (highest);
 }

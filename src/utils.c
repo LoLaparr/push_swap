@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:02:19 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/25 17:58:39 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/28 17:43:21 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,25 +51,29 @@ t_lst	*ft_new_lst(long long int content)
 	return (new);
 }
 
-void	ft_print_stacks(t_lst *stack_a, t_lst *stack_b)
+void	ft_print_stacks(t_lst *a_stack, t_lst *b_stack)
 {
-	ft_printf("\n---------------------\t");
-	ft_printf("\t---------------------\n");
-	while (stack_a || stack_b)
+	ft_printf("-------------------");
+	ft_printf("-------------------\t\t\t\n\n");
+	ft_printf("a_stack\t\t\tb_stack\n");
+	while (a_stack != NULL || b_stack != NULL)
 	{
-		if (stack_a != NULL)
+		if (a_stack != NULL)
 		{
-			ft_printf("content stack_a : %i\n",
-						stack_a->content);
-			stack_a = stack_a->next;
-			ft_printf("\t\t");
+			ft_printf("%d\t\t\t", a_stack->content);
+			a_stack = a_stack->next;
 		}
-		if (stack_b != NULL)
+		else
+			ft_printf("\t\t\t\t\t\t");
+		if (b_stack != NULL)
 		{
-			ft_printf("content stack_b : %i\n", stack_b->content);
-			stack_b = stack_b->next;
+			ft_printf("%d\t\t\t", b_stack->content);
+			b_stack = b_stack->next;
 		}
+		else
+			ft_printf("\t\t\t\t\t\t");
+		ft_printf("\n");
 	}
-		ft_printf("\n---------------------\t");
-		ft_printf("\t---------------------\n");
+	ft_printf("-------------------");
+	ft_printf("-------------------\t\t\t\n\n");
 }

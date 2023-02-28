@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:19:10 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/27 18:35:27 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/02/28 18:09:29 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include "get_next_line.h"
 # include "libft.h"
 
-# define INT_MAXI 2147483648
-# define INT_MINI -2147483647
+# define INT_MAXI 2147483647
+# define INT_MINI -2147483648
 
 typedef struct s_lst
 {
@@ -43,10 +43,13 @@ void				rr(t_lst **list_a, t_lst **list_b);
 void				rra(t_lst **list_a);
 void				rrb(t_lst **list_b);
 void				rrr(t_lst **list_a, t_lst **list_b);
-void				ft_print_stacks(t_lst *stack_a, t_lst *stack_b);
 void				pb(t_lst **list_a, t_lst **list_b);
 void				pa(t_lst **list_a, t_lst **list_b);
+void				ft_print_stacks(t_lst *stack_a, t_lst *stack_b);
 int					ft_find_highest(t_lst *stack_a);
 void				ft_sort_case_3(t_lst **stack_a);
+int					ft_len_of_stack(t_lst *stack_a);
+int					ft_is_sort(t_lst *stack_a);
+void				ft_sort_case_5(t_lst **stack_a, t_lst **stack_b);
 
 #endif

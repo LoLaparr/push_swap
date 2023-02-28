@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 18:09:21 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/25 18:12:44 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/28 16:12:53 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ra(t_lst **list_a)
 	tmp->next = *list_a;
 	*list_a = (*list_a)->next;
 	tmp_2->next = NULL;
+	ft_printf("ra\n");
 }
 
 void	rb(t_lst **list_b)
@@ -38,10 +39,12 @@ void	rb(t_lst **list_b)
 	tmp->next = *list_b;
 	*list_b = (*list_b)->next;
 	tmp_2->next = NULL;
+	ft_printf("rb\n");
 }
 
 void	rr(t_lst **list_a, t_lst **list_b)
 {
 	ra(list_a);
 	rb(list_b);
+	ft_printf("rr\n");
 }

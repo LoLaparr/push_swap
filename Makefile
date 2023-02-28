@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+         #
+#    By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 14:52:45 by lolaparr          #+#    #+#              #
-#    Updated: 2023/02/27 18:29:13 by louislaparr      ###   ########.fr        #
+#    Updated: 2023/02/28 17:12:02 by lolaparr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRCS		:=  push_swap.c \
 				swap.c \
 				rotate.c \
 				reverse_rotate.c \
-				case_3.c
+				case_3.c \
+				case_5.c
 
 SRCS		:= $(SRCS:%=$(SRC_DIR)/%)
 OBJS		:= $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
@@ -39,7 +40,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	make -C libft
-	$(CC) -g $(OBJS) $(LIBRARIES) -o $(NAME)
+	$(CC) $(OBJS) $(LIBRARIES) -o $(NAME)
 	$(info CREATED $@)
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c

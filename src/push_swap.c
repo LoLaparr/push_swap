@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/27 18:38:55 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/02/28 17:13:22 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	main(int ac, char **av)
 	i = ft_check_double(&list_a);
 	if (i == 0)
 	{
-		ft_sort_case_3(&list_a);
+		ft_sort_case_5(&list_a, &list_b);
 		ft_print_stacks(list_a, list_b);
 	}
 	return (0);
