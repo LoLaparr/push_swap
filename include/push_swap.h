@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:19:10 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/25 18:17:47 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:35:27 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@ void				rrr(t_lst **list_a, t_lst **list_b);
 void				ft_print_stacks(t_lst *stack_a, t_lst *stack_b);
 void				pb(t_lst **list_a, t_lst **list_b);
 void				pa(t_lst **list_a, t_lst **list_b);
+int					ft_find_highest(t_lst *stack_a);
+void				ft_sort_case_3(t_lst **stack_a);
 
 #endif

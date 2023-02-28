@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/25 18:21:09 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:38:55 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,8 @@ int	main(int ac, char **av)
 {
 	t_lst	*list_a;
 	t_lst	*list_b;
-	// t_lst	*cpy = NULL;
 	int		i;
 
-	// ft_printf("content->cpy = %i\n", cpy->content);
 	list_a = NULL;
 	list_b = NULL;
 	i = 0;
@@ -53,13 +51,9 @@ int	main(int ac, char **av)
 		return (1);
 	i = ft_make_stack(ac, av, &list_a);
 	i = ft_check_double(&list_a);
-	// cpy = list_b;
 	if (i == 0)
 	{
-		pb(&list_a, &list_b);
-		pb(&list_a, &list_b);
-		pb(&list_a, &list_b);
-		rrr(&list_a, &list_b);
+		ft_sort_case_3(&list_a);
 		ft_print_stacks(list_a, list_b);
 	}
 	return (0);
