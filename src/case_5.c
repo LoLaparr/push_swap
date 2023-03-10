@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   case_5.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 16:37:36 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/02/28 18:06:59 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/03/05 13:42:00 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,9 @@ void	ft_sort_case_5(t_lst **stack_a, t_lst **stack_b)
 	{
 		if ((*stack_a)->content > (*stack_b)->content)
 			pa(stack_a, stack_b);
-		else
+		else if ((*stack_a)->content < (*stack_b)->content)
 			ra(stack_a);
+
 	}
 	while (ft_is_sort(*stack_a) == 1)
 		ra(stack_a);
