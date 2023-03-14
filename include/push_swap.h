@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:19:10 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/10 16:58:05 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/14 17:16:52 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,13 @@ void				ft_sort_case_3(t_lst **stack_a);
 int					ft_len_of_stack(t_lst *stack_a);
 int					ft_is_sort(t_lst *stack_a);
 void				ft_sort_case_5(t_lst **stack_a, t_lst **stack_b);
+void				ft_algo(t_lst **stack_a, t_lst **stack_b);
+void				ft_move(t_lst **stack_a, t_lst **stack_b, int cost_a, int cost_b);
+void				ft_do_rotate_b(t_lst **stack_b, int *cost_b);
+void				ft_do_rotate_a(t_lst **stack_a, int *cost_a);
+void				ft_do_reverse_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a, int *cost_b);
+void				ft_do_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a, int *cost_b);
+int					ft_is_sorted(t_lst *stack_a);
+int					ft_absolute_value(int nb);
 
 #endif

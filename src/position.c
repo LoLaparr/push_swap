@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 13:13:07 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/10 15:22:25 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/14 17:22:54 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ int	ft_find_lowest_pos(t_lst **stack_a)
 	t_lst	*tmp;
 
 	ft_make_position(stack_a);
+	tmp = *stack_a;
 	lowest_pos = tmp->pos;
 	lowest_index = INT_MAXI;
-	tmp = *stack_a;
 	while (tmp)
 	{
 		if (tmp->index < lowest_index)
@@ -59,7 +59,7 @@ int	ft_get_target(t_lst **stack_a, int index_b, int index_target, int pos_target
 		if (tmp->index > index_b && tmp->index < index_target)
 		{
 			index_target = tmp->index;
-			pos_target = tmp->pos
+			pos_target = tmp->pos;
 		}
 		tmp = tmp->next;
 	}

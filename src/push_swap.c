@@ -6,11 +6,22 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/08 20:02:06 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/14 17:12:05 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	ft_is_sorted(t_lst *stack_a)
+{
+	while (stack_a)
+	{
+		if (stack_a->content > stack_a->next->content)
+			return (1);
+		stack_a = stack_a->next;
+	}
+	return (0);
+}
 
 int	ft_make_stack(int ac, char **av, t_lst **list_a)
 {
@@ -89,7 +100,7 @@ int	main(int ac, char **av)
 	ft_do_index(list_a, size);
 	if (i == 0)
 	{
-		ft_sort_case_5(&list_a, &list_b);
+		ft_algo(&list_a, &list_b);
 		ft_print_stacks(list_a, list_b);
 	}
 	return (0);

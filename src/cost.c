@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 15:39:05 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/10 16:57:51 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/14 17:15:57 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	ft_get_cost(t_lst **stack_a, t_lst **stack_b)
 	t_lst	*tmp_a;
 	t_lst	*tmp_b;
 
-	size_a = ft_size_of_stack(*stack_a);
-	size_b = ft_size_of_stack(*stack_b);
 	tmp_a = *stack_a;
-	tmp_b = *size_b;
+	tmp_b = *stack_b;
+	size_a = ft_size_of_stack(tmp_a);
+	size_b = ft_size_of_stack(tmp_b);
 	while (tmp_b)
 	{
 		tmp_b->cost_b = tmp_b->pos;
@@ -54,5 +54,5 @@ void	ft_cheapest_move_to_do(t_lst **stack_a, t_lst **stack_b)
 		}
 		tmp = tmp->next;
 	}
-	ft_move(stack_a, size_b, cost_a, cost_b);
+	ft_move(stack_a, stack_b, cost_a, cost_b);
 }
