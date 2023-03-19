@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/14 17:12:05 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/19 15:50:45 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_is_sorted(t_lst *stack_a)
 {
-	while (stack_a)
+	while (stack_a->next != NULL)
 	{
 		if (stack_a->content > stack_a->next->content)
 			return (1);
@@ -45,6 +45,7 @@ int	ft_make_stack(int ac, char **av, t_lst **list_a)
 		if (nb > INT_MAXI || nb < INT_MINI)
 			return (1);
 		new = ft_new_lst(nb);
+		ft_set_new_lst(new);
 		ft_add_back_lst(list_a, new);
 		++i;
 	}
@@ -97,7 +98,7 @@ int	main(int ac, char **av)
 	i = ft_make_stack(ac, av, &list_a);
 	i = ft_check_double(&list_a);
 	size = ft_size_of_stack(list_a);
-	ft_do_index(list_a, size);
+	ft_do_index(list_a, size + 1);
 	if (i == 0)
 	{
 		ft_algo(&list_a, &list_b);

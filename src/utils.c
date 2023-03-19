@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:02:19 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/10 16:54:25 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/19 15:51:17 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,15 @@ t_lst	*ft_new_lst(long long int content)
 	return (new);
 }
 
+void	ft_set_new_lst(t_lst *new)
+{
+	new->index = 0;
+	new->pos = -1;
+	new->pos_target = -1;
+	new->cost_a = -1;
+	new->cost_b = -1;
+}
+
 int	ft_size_of_stack(t_lst *stack_a)
 {
 	int	size;
@@ -69,7 +78,7 @@ int	ft_size_of_stack(t_lst *stack_a)
 int	ft_absolute_value(int nb)
 {
 	if (nb < 0)
-		nb *= -1;
+		return (nb * -1);
 	return (nb);
 }
 
@@ -82,7 +91,7 @@ void	ft_print_stacks(t_lst *a_stack, t_lst *b_stack)
 	{
 		if (a_stack != NULL)
 		{
-			ft_printf("index : %d ", a_stack->index);
+			ft_printf("index : %d -- ", a_stack->index);
 			ft_printf("%d\t\t\t", a_stack->content);
 			a_stack = a_stack->next;
 		}
@@ -90,7 +99,7 @@ void	ft_print_stacks(t_lst *a_stack, t_lst *b_stack)
 			ft_printf("\t\t\t\t\t\t");
 		if (b_stack != NULL)
 		{
-			ft_printf("index : %d ", b_stack->index);
+			ft_printf("index : %d -- ", b_stack->index);
 			ft_printf("%d\t\t\t", b_stack->content);
 			b_stack = b_stack->next;
 		}

@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 13:13:07 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/14 17:22:54 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/19 15:31:22 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int	ft_get_target(t_lst **stack_a, int index_b, int index_target, int pos_target
 		}
 		tmp = tmp->next;
 	}
+	if (index_target != INT_MAXI)
+		return (pos_target);
 	tmp = *stack_a;
 	while (tmp)
 	{
@@ -89,6 +91,7 @@ void	ft_get_target_postition(t_lst **stack_a, t_lst **stack_b)
 	{
 		target_pos = ft_get_target(stack_a, tmp->index, INT_MAXI, target_pos);
 		tmp->pos_target = target_pos;
+		ft_printf("target_pos : %i\n", tmp->pos_target);
 		tmp = tmp->next;
 	}
 }

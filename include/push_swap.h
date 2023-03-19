@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:19:10 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/14 17:16:52 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/19 15:51:10 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,6 @@ void				ft_do_reverse_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a,
 void				ft_do_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a, int *cost_b);
 int					ft_is_sorted(t_lst *stack_a);
 int					ft_absolute_value(int nb);
+void				ft_set_new_lst(t_lst *new);
 
 #endif

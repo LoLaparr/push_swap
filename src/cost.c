@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 15:39:05 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/14 17:15:57 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/19 15:37:18 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ void	ft_get_cost(t_lst **stack_a, t_lst **stack_b)
 	tmp_b = *stack_b;
 	size_a = ft_size_of_stack(tmp_a);
 	size_b = ft_size_of_stack(tmp_b);
+	printf("tmp_b->cost_b : %i\ntmp_b->pos : %i\n", tmp_b->cost_b, tmp_b->pos);
 	while (tmp_b)
 	{
 		tmp_b->cost_b = tmp_b->pos;
-		if (tmp_b->cost_b > (size_b / 2))
+		if (tmp_b->pos > size_b / 2)
 			tmp_b->cost_b = (size_b - tmp_b->pos) * -1;
 		tmp_b->cost_a = tmp_b->pos_target;
-		if (tmp_b->pos_target > (size_a / 2))
+		if (tmp_b->pos_target > size_a / 2)
 			tmp_b->cost_a = (size_a - tmp_b->pos_target) * -1;
 		tmp_b = tmp_b->next;
 	}
@@ -46,11 +47,12 @@ void	ft_cheapest_move_to_do(t_lst **stack_a, t_lst **stack_b)
 	tmp = *stack_b;
 	while (tmp)
 	{
-		if (ft_absolute_value(cost_a) + ft_absolute_value(cost_b) < ft_absolute_value(cheapest))
+		if (ft_absolute_value(tmp->cost_a) + ft_absolute_value(tmp->cost_b) < ft_absolute_value(cheapest))
 		{
+			cheapest = ft_absolute_value(tmp->cost_a) + ft_absolute_value(tmp->cost_b);
 			cost_a = tmp->cost_a;
 			cost_b = tmp->cost_b;
-			cheapest = ft_absolute_value(cost_a) + ft_absolute_value(cost_b);
+			printf("tmp->cost a : %i\n", tmp->cost_a);
 		}
 		tmp = tmp->next;
 	}
