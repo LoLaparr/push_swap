@@ -6,7 +6,7 @@
 #    By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 14:52:45 by lolaparr          #+#    #+#              #
-#    Updated: 2023/03/14 17:21:16 by louislaparr      ###   ########.fr        #
+#    Updated: 2023/03/22 16:02:13 by louislaparr      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRCS		:=  push_swap.c \
 				cost.c \
 				move.c \
 				position.c \
-				sort.c
+				sort.c \
+				free.c
 
 SRCS		:= $(SRCS:%=$(SRC_DIR)/%)
 OBJS		:= $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)

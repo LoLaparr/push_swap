@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/19 15:50:45 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/21 14:43:50 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ int	main(int ac, char **av)
 	ft_do_index(list_a, size + 1);
 	if (i == 0)
 	{
+		ft_print_stacks(list_a, list_b);
 		ft_algo(&list_a, &list_b);
 		ft_print_stacks(list_a, list_b);
 	}

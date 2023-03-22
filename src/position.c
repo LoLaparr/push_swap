@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 13:13:07 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/19 15:31:22 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 15:42:06 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,15 +83,15 @@ void	ft_get_target_postition(t_lst **stack_a, t_lst **stack_b)
 	int	target_pos;
 	t_lst	*tmp;
 
-	target_pos = 0;
 	tmp = *stack_b;
 	ft_make_position(stack_a);
 	ft_make_position(stack_b);
+	target_pos = 0;
 	while (tmp)
 	{
 		target_pos = ft_get_target(stack_a, tmp->index, INT_MAXI, target_pos);
 		tmp->pos_target = target_pos;
-		ft_printf("target_pos : %i\n", tmp->pos_target);
+		ft_printf("content : %i\tposition :(a) %i (b) %i\n", tmp->content, (*stack_a)->pos, (*stack_b)->pos);
 		tmp = tmp->next;
 	}
 }

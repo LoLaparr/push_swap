@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 15:39:05 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/19 15:37:18 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 15:19:00 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	ft_cheapest_move_to_do(t_lst **stack_a, t_lst **stack_b)
 			cheapest = ft_absolute_value(tmp->cost_a) + ft_absolute_value(tmp->cost_b);
 			cost_a = tmp->cost_a;
 			cost_b = tmp->cost_b;
-			printf("tmp->cost a : %i\n", tmp->cost_a);
+			printf("tmp->cost a : %i\n", cost_a);
 		}
 		tmp = tmp->next;
 	}

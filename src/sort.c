@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 20:11:23 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/17 18:12:22 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 15:42:28 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	ft_algo(t_lst **stack_a, t_lst **stack_b)
 	ft_sort_case_3(stack_a);
 	while (*stack_b)
 	{
-		ft_get_target_postition(stack_a, stack_a);
+		ft_get_target_postition(stack_a, stack_b);
 		ft_get_cost(stack_a, stack_b);
 		ft_cheapest_move_to_do(stack_a, stack_b);
 	}

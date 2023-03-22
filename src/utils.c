@@ -6,7 +6,7 @@
 /*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:02:19 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/19 15:51:17 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 15:32:58 by louislaparr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ void	ft_print_stacks(t_lst *a_stack, t_lst *b_stack)
 		{
 			ft_printf("index : %d -- ", b_stack->index);
 			ft_printf("%d\t\t\t", b_stack->content);
+
 			b_stack = b_stack->next;
 		}
 		else
