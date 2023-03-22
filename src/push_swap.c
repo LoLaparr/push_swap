@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/21 14:43:50 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 16:47:33 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_make_stack(int ac, char **av, t_lst **list_a)
 	while (args[i])
 	{
 		nb = ft_atoi(args[i]);
-		if (nb > INT_MAXI || nb < INT_MINI)
+		if (nb > INT_MAXI && nb < INT_MINI)
 			return (1);
 		new = ft_new_lst(nb);
 		ft_set_new_lst(new);
@@ -99,11 +99,10 @@ int	main(int ac, char **av)
 	i = ft_check_double(&list_a);
 	size = ft_size_of_stack(list_a);
 	ft_do_index(list_a, size + 1);
-	if (i == 0)
-	{
-		ft_print_stacks(list_a, list_b);
-		ft_algo(&list_a, &list_b);
-		ft_print_stacks(list_a, list_b);
-	}
+	if (i != 0)
+		ft_exit(&list_a, &list_b);
+	// ft_print_stacks(list_a, list_b);
+	ft_algo(&list_a, &list_b);
+	//ft_print_stacks(list_a, list_b);
 	return (0);
 }

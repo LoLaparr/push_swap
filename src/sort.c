@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 20:11:23 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/22 15:42:28 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 16:55:31 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ void	ft_put_in_order(t_lst **stack_a)
 	{
 		while (lowest_pos < stack_size)
 		{
-			ft_printf("JE PASSE");
-			rra(stack_a);
+			rra(stack_a, 0);
 			++lowest_pos;
 		}
 	}
@@ -32,7 +31,7 @@ void	ft_put_in_order(t_lst **stack_a)
 	{
 		while (lowest_pos > 0)
 		{
-			ra(stack_a);
+			ra(stack_a, 0);
 			--lowest_pos;
 		}
 	}
@@ -55,7 +54,7 @@ void	ft_push_all_keep_tree(t_lst **stack_a, t_lst **stack_b)
 			++pushed;
 		}
 		else
-			ra(stack_a);
+			ra(stack_a, 0);
 		++i;
 	}
 	while (stack_size - pushed > 3)

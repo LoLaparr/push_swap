@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:02:19 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/22 15:32:58 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 16:46:39 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,32 +82,32 @@ int	ft_absolute_value(int nb)
 	return (nb);
 }
 
-void	ft_print_stacks(t_lst *a_stack, t_lst *b_stack)
-{
-	ft_printf("-------------------");
-	ft_printf("-------------------\t\t\t\n\n");
-	ft_printf("a_stack\t\t\tb_stack\n");
-	while (a_stack != NULL || b_stack != NULL)
-	{
-		if (a_stack != NULL)
-		{
-			ft_printf("index : %d -- ", a_stack->index);
-			ft_printf("%d\t\t\t", a_stack->content);
-			a_stack = a_stack->next;
-		}
-		else
-			ft_printf("\t\t\t\t\t\t");
-		if (b_stack != NULL)
-		{
-			ft_printf("index : %d -- ", b_stack->index);
-			ft_printf("%d\t\t\t", b_stack->content);
+// void	ft_print_stacks(t_lst *a_stack, t_lst *b_stack)
+// {
+// 	ft_printf("-------------------");
+// 	ft_printf("-------------------\t\t\t\n\n");
+// 	ft_printf("a_stack\t\t\tb_stack\n");
+// 	while (a_stack != NULL || b_stack != NULL)
+// 	{
+// 		if (a_stack != NULL)
+// 		{
+// 			ft_printf("index : %d -- ", a_stack->index);
+// 			ft_printf("%d\t\t\t", a_stack->content);
+// 			a_stack = a_stack->next;
+// 		}
+// 		else
+// 			ft_printf("\t\t\t\t\t\t");
+// 		if (b_stack != NULL)
+// 		{
+// 			ft_printf("index : %d -- ", b_stack->index);
+// 			ft_printf("%d\t\t\t", b_stack->content);
 
-			b_stack = b_stack->next;
-		}
-		else
-			ft_printf("\t\t\t\t\t\t");
-		ft_printf("\n");
-	}
-	ft_printf("-------------------");
-	ft_printf("-------------------\t\t\t\n\n");
-}
+// 			b_stack = b_stack->next;
+// 		}
+// 		else
+// 			ft_printf("\t\t\t\t\t\t");
+// 		ft_printf("\n");
+// 	}
+// 	ft_printf("-------------------");
+// 	ft_printf("-------------------\t\t\t\n\n");
+// }

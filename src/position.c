@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   position.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 13:13:07 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/22 15:42:06 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 16:26:47 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ void	ft_get_target_postition(t_lst **stack_a, t_lst **stack_b)
 	{
 		target_pos = ft_get_target(stack_a, tmp->index, INT_MAXI, target_pos);
 		tmp->pos_target = target_pos;
-		ft_printf("content : %i\tposition :(a) %i (b) %i\n", tmp->content, (*stack_a)->pos, (*stack_b)->pos);
 		tmp = tmp->next;
 	}
 }

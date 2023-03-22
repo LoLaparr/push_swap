@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 15:53:27 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/22 16:07:06 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 16:21:37 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_free_stack(t_lst **stack)
 {
 	t_lst	*tmp;
 
+	tmp = *stack;
 	if (!stack || !(*stack))
 		return ;
 	while (tmp)

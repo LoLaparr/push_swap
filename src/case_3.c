@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   case_3.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 18:13:16 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/16 18:07:30 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 16:55:41 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void	ft_sort_case_3(t_lst **stack_a)
 
 	highest = ft_find_highest((*stack_a));
 	if (highest == (*stack_a)->content)
-		ra(stack_a);
+		ra(stack_a, 0);
 	else if (highest == (*stack_a)->next->content)
-		rra(stack_a);
+		rra(stack_a, 0);
 	if ((*stack_a)->content > (*stack_a)->next->content)
-		sa(stack_a);
+		sa(stack_a, 0);
 }

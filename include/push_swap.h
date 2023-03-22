@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:19:10 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/22 16:07:21 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 16:58:37 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ int					ft_check_digit(char **str);
 int					ft_check_double(t_lst **stack_a);
 int					ft_size_of_stack(t_lst *stack_a);
 void				ft_do_index(t_lst *stack_a, int stack_size);
-void				sa(t_lst **list_a);
-void				sb(t_lst **list_b);
+void				sa(t_lst **list_a, int nb);
+void				sb(t_lst **list_b, int nb);
 void				ss(t_lst **list_a, t_lst **list_b);
-void				ra(t_lst **list_a);
-void				rb(t_lst **list_b);
+void				ra(t_lst **list_a, int nb);
+void				rb(t_lst **list_b, int nb);
 void				rr(t_lst **list_a, t_lst **list_b);
-void				rra(t_lst **list_a);
-void				rrb(t_lst **list_b);
+void				rra(t_lst **list_a, int nb);
+void				rrb(t_lst **list_b, int nb);
 void				rrr(t_lst **list_a, t_lst **list_b);
 void				pb(t_lst **list_a, t_lst **list_b);
 void				pa(t_lst **list_a, t_lst **list_b);
@@ -59,11 +59,7 @@ int					ft_find_lowest_pos(t_lst **stack_a);
 int					ft_find_highest(t_lst *stack_a);
 void				ft_get_cost(t_lst **stack_a, t_lst **stack_b);
 void				ft_cheapest_move_to_do(t_lst **stack_a, t_lst **stack_b);
-void				ft_print_stacks(t_lst *stack_a, t_lst *stack_b);
 void				ft_sort_case_3(t_lst **stack_a);
-int					ft_len_of_stack(t_lst *stack_a);
-int					ft_is_sort(t_lst *stack_a);
-void				ft_sort_case_5(t_lst **stack_a, t_lst **stack_b);
 void				ft_algo(t_lst **stack_a, t_lst **stack_b);
 void				ft_move(t_lst **stack_a, t_lst **stack_b, int cost_a, int cost_b);
 void				ft_do_rotate_b(t_lst **stack_b, int *cost_b);

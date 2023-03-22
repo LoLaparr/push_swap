@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cost.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: louislaparre <louislaparre@student.42.f    +#+  +:+       +#+        */
+/*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 15:39:05 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/22 15:19:00 by louislaparr      ###   ########.fr       */
+/*   Updated: 2023/03/22 16:26:32 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	ft_get_cost(t_lst **stack_a, t_lst **stack_b)
 	tmp_b = *stack_b;
 	size_a = ft_size_of_stack(tmp_a);
 	size_b = ft_size_of_stack(tmp_b);
-	printf("tmp_b->cost_b : %i\ntmp_b->pos : %i\n", tmp_b->cost_b, tmp_b->pos);
 	while (tmp_b)
 	{
 		tmp_b->cost_b = tmp_b->pos;
@@ -52,7 +51,6 @@ void	ft_cheapest_move_to_do(t_lst **stack_a, t_lst **stack_b)
 			cheapest = ft_absolute_value(tmp->cost_a) + ft_absolute_value(tmp->cost_b);
 			cost_a = tmp->cost_a;
 			cost_b = tmp->cost_b;
-			printf("tmp->cost a : %i\n", cost_a);
 		}
 		tmp = tmp->next;
 	}
