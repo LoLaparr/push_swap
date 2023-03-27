@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 15:39:05 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/22 16:26:32 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/03/27 15:20:15 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_get_cost(t_lst **stack_a, t_lst **stack_b)
 {
-	int	size_a;
-	int	size_b;
+	int		size_a;
+	int		size_b;
 	t_lst	*tmp_a;
 	t_lst	*tmp_b;
 
@@ -37,18 +37,20 @@ void	ft_get_cost(t_lst **stack_a, t_lst **stack_b)
 
 void	ft_cheapest_move_to_do(t_lst **stack_a, t_lst **stack_b)
 {
-	int	cost_a;
-	int	cost_b;
-	int	cheapest;
+	int		cost_a;
+	int		cost_b;
+	int		cheapest;
 	t_lst	*tmp;
 
 	cheapest = INT_MAXI;
 	tmp = *stack_b;
 	while (tmp)
 	{
-		if (ft_absolute_value(tmp->cost_a) + ft_absolute_value(tmp->cost_b) < ft_absolute_value(cheapest))
+		if (ft_absolute_value(tmp->cost_a)
+			+ ft_absolute_value(tmp->cost_b) < ft_absolute_value(cheapest))
 		{
-			cheapest = ft_absolute_value(tmp->cost_a) + ft_absolute_value(tmp->cost_b);
+			cheapest = ft_absolute_value(tmp->cost_a)
+				+ ft_absolute_value(tmp->cost_b);
 			cost_a = tmp->cost_a;
 			cost_b = tmp->cost_b;
 		}

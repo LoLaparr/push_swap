@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:19:10 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/22 16:58:37 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/03/27 15:52:55 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,19 @@
 # include "ft_printf.h"
 # include "get_next_line.h"
 # include "libft.h"
+# include <limits.h>
 
 # define INT_MAXI 2147483647
 # define INT_MINI -2147483648
 
 typedef struct s_lst
 {
-	int	content;
-	int	index;
-	int	pos;
-	int	pos_target;
-	int	cost_a;
-	int	cost_b;
+	int				content;
+	int				index;
+	int				pos;
+	int				pos_target;
+	int				cost_a;
+	int				cost_b;
 	struct s_lst	*next;
 }					t_lst;
 
@@ -61,11 +62,14 @@ void				ft_get_cost(t_lst **stack_a, t_lst **stack_b);
 void				ft_cheapest_move_to_do(t_lst **stack_a, t_lst **stack_b);
 void				ft_sort_case_3(t_lst **stack_a);
 void				ft_algo(t_lst **stack_a, t_lst **stack_b);
-void				ft_move(t_lst **stack_a, t_lst **stack_b, int cost_a, int cost_b);
+void				ft_move(t_lst **stack_a, t_lst **stack_b, int cost_a,
+						int cost_b);
 void				ft_do_rotate_b(t_lst **stack_b, int *cost_b);
 void				ft_do_rotate_a(t_lst **stack_a, int *cost_a);
-void				ft_do_reverse_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a, int *cost_b);
-void				ft_do_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a, int *cost_b);
+void				ft_do_reverse_rotate_both(t_lst **stack_a, t_lst **stack_b,
+						int *cost_a, int *cost_b);
+void				ft_do_rotate_both(t_lst **stack_a, t_lst **stack_b,
+						int *cost_a, int *cost_b);
 int					ft_is_sorted(t_lst *stack_a);
 int					ft_absolute_value(int nb);
 void				ft_set_new_lst(t_lst *new);

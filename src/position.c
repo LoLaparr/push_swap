@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 13:13:07 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/22 16:26:47 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/03/27 15:20:48 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_make_position(t_lst **stack_a)
 {
-	int	i;
+	int		i;
 	t_lst	*tmp;
 
 	i = 0;
@@ -29,8 +29,8 @@ void	ft_make_position(t_lst **stack_a)
 
 int	ft_find_lowest_pos(t_lst **stack_a)
 {
-	int	lowest_pos;
-	int	lowest_index;
+	int		lowest_pos;
+	int		lowest_index;
 	t_lst	*tmp;
 
 	ft_make_position(stack_a);
@@ -49,7 +49,8 @@ int	ft_find_lowest_pos(t_lst **stack_a)
 	return (lowest_pos);
 }
 
-int	ft_get_target(t_lst **stack_a, int index_b, int index_target, int pos_target)
+int	ft_get_target(t_lst **stack_a, int index_b, int index_target,
+		int pos_target)
 {
 	t_lst	*tmp;
 
@@ -80,7 +81,7 @@ int	ft_get_target(t_lst **stack_a, int index_b, int index_target, int pos_target
 
 void	ft_get_target_postition(t_lst **stack_a, t_lst **stack_b)
 {
-	int	target_pos;
+	int		target_pos;
 	t_lst	*tmp;
 
 	tmp = *stack_b;

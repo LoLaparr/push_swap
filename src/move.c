@@ -6,13 +6,14 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:30:01 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/22 16:53:45 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/03/27 15:21:46 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_do_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a, int *cost_b)
+void	ft_do_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a,
+		int *cost_b)
 {
 	while (*cost_a > 0 && *cost_b > 0)
 	{
@@ -22,7 +23,8 @@ void	ft_do_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a, int *cost_
 	}
 }
 
-void	ft_do_reverse_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a, int *cost_b)
+void	ft_do_reverse_rotate_both(t_lst **stack_a, t_lst **stack_b, int *cost_a,
+		int *cost_b)
 {
 	while (*cost_a < 0 && *cost_b < 0)
 	{

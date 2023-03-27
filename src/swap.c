@@ -6,10 +6,9 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 18:00:24 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/22 16:57:15 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/03/27 15:21:33 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -24,13 +23,13 @@ void	sa(t_lst **list_a, int nb)
 	tmp_1 = *list_a;
 	tmp_2 = tmp_1->next;
 	tmp_3 = tmp_2->next;
-
 	tmp_1->next = tmp_3;
 	tmp_2->next = tmp_1;
 	*list_a = tmp_2;
 	if (nb == 0)
 		ft_printf("sa\n");
 }
+
 void	sb(t_lst **list_b, int nb)
 {
 	t_lst	*tmp_1;
@@ -42,7 +41,6 @@ void	sb(t_lst **list_b, int nb)
 	tmp_1 = *list_b;
 	tmp_2 = tmp_1->next;
 	tmp_3 = tmp_2->next;
-
 	tmp_1->next = tmp_3;
 	tmp_2->next = tmp_1;
 	*list_b = tmp_2;

@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:02:19 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/22 16:46:39 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/03/27 15:22:11 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,6 @@ t_lst	*ft_new_lst(long long int content)
 	new->content = content;
 	new->next = NULL;
 	return (new);
-}
-
-void	ft_set_new_lst(t_lst *new)
-{
-	new->index = 0;
-	new->pos = -1;
-	new->pos_target = -1;
-	new->cost_a = -1;
-	new->cost_b = -1;
 }
 
 int	ft_size_of_stack(t_lst *stack_a)

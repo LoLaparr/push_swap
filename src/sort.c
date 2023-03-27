@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 20:11:23 by louislaparr       #+#    #+#             */
-/*   Updated: 2023/03/22 16:55:31 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/03/27 15:20:34 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,4 @@ void	ft_algo(t_lst **stack_a, t_lst **stack_b)
 	i = ft_is_sorted(*stack_a);
 	if (i > 0)
 		ft_put_in_order(stack_a);
-
 }

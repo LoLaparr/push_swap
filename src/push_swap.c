@@ -6,7 +6,7 @@
 /*   By: lolaparr <lolaparr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 10:17:50 by lolaparr          #+#    #+#             */
-/*   Updated: 2023/03/22 16:47:33 by lolaparr         ###   ########.fr       */
+/*   Updated: 2023/03/27 16:13:39 by lolaparr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,21 @@ int	ft_is_sorted(t_lst *stack_a)
 	return (0);
 }
 
+void	ft_set_new_lst(t_lst *new)
+{
+	new->index = 0;
+	new->pos = -1;
+	new->pos_target = -1;
+	new->cost_a = -1;
+	new->cost_b = -1;
+}
+
 int	ft_make_stack(int ac, char **av, t_lst **list_a)
 {
-	int		i;
+	int				i;
 	long long int	nb;
-	char	**args;
-	t_lst	*new;
+	char			**args;
+	t_lst			*new;
 
 	i = 1;
 	nb = 0;
@@ -42,7 +51,7 @@ int	ft_make_stack(int ac, char **av, t_lst **list_a)
 	while (args[i])
 	{
 		nb = ft_atoi(args[i]);
-		if (nb > INT_MAXI && nb < INT_MINI)
+		if (!(nb < INT_MAXI && nb > INT_MINI))
 			return (1);
 		new = ft_new_lst(nb);
 		ft_set_new_lst(new);
@@ -54,9 +63,9 @@ int	ft_make_stack(int ac, char **av, t_lst **list_a)
 
 void	ft_do_index(t_lst *stack_a, int stack_size)
 {
-	int	content;
-	t_lst *highest;
-	t_lst *tmp;
+	int		content;
+	t_lst	*highest;
+	t_lst	*tmp;
 
 	while (stack_size > 0)
 	{
@@ -73,8 +82,7 @@ void	ft_do_index(t_lst *stack_a, int stack_size)
 				highest = tmp;
 				tmp = stack_a;
 			}
-			else
-				tmp = tmp->next;
+			tmp = tmp->next;
 		}
 		--stack_size;
 		if (highest != NULL)
@@ -94,15 +102,14 @@ int	main(int ac, char **av)
 	i = 0;
 	i = ft_check_all(ac, av);
 	if (i != 0)
-		return (1);
-	i = ft_make_stack(ac, av, &list_a);
-	i = ft_check_double(&list_a);
-	size = ft_size_of_stack(list_a);
-	ft_do_index(list_a, size + 1);
+		ft_exit(&list_a, &list_b);
+	i += ft_make_stack(ac, av, &list_a);
+	i += ft_check_double(&list_a);
 	if (i != 0)
 		ft_exit(&list_a, &list_b);
-	// ft_print_stacks(list_a, list_b);
+	size = ft_size_of_stack(list_a);
+	ft_do_index(list_a, size + 1);
 	ft_algo(&list_a, &list_b);
-	//ft_print_stacks(list_a, list_b);
+	ft_free_stack(&list_a);
 	return (0);
 }
